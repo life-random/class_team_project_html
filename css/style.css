@@ -1,0 +1,15 @@
+:root {
+    --st-header-bg: #171D25;
+    --st-logo-react: #FFFFFF;
+    --st-nav-bg: #272A33;
+    --st-blue: #1A9FFF;
+    --st-green-btn: #6C9018;
+    --st-lightgreen: #A1CD44;
+    --st-blue-text: #5EAFDE;
+    --st-skyblue-btn: #66C0F4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
