@@ -2,8 +2,13 @@
     --st-header-bg: #171D25;
     --st-logo-react: #FFFFFF;
     --st-nav-bg: #272A33;
+    --st-header-gray: #C5C3C0;
+    --st-gray-text: #969696;
+    --st-lang-opt: #3D4450;
+    --st-lang-opt-hover: #DCDEDF;
     --st-blue: #1A9FFF;
-    --st-green-btn: #6C9018;
+    --st-green-btn: #5C7E10;
+    --st-green-btn-hover:#6C9018;
     --st-lightgreen: #A1CD44;
     --st-blue-text: #5EAFDE;
     --st-skyblue-btn: #66C0F4;
@@ -12,4 +17,226 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+header {
+    font-family: "Motiva Sans", sans-serif;
+    height: 104px;
+    background-color: var(--st-header-bg);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+header a {
+    text-decoration: none;
+}
+
+.hd-container {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+}
+.hd-left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.logo img {
+    display: block;
+    width: 144.5px;
+}
+.hd-menu {
+    display: flex;
+    /* gap: 16px; */
+    align-items: center;
+}
+
+/* 메뉴 드롭다운 */
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px; 
+    margin-bottom: -15px;
+}
+.hd-menu .menu-main {
+    display: inline-block;
+}
+.hd-menu a{
+    padding: 0 6px;
+    position: relative;
+    color: var(--st-lang-opt-hover);
+    font-weight: 500;
+
+    transition: color 0.2s ease; 
+}
+.hd-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 6px;
+    right: 6px;
+    height: 3px;
+    background-color: transparent;
+    border-radius: 99px;
+}
+
+/* 활성화 메뉴 외 다른 메뉴 hover */
+.hd-menu a:hover {
+    color: var(--st-logo-react);
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 25px;                 
+    left: 0; 
+
+    width: 97px;              
+    background-color: var(--st-lang-opt);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1000;      
+}
+.menu-dropdown a {
+    display: block;
+    padding: 8px 15px;
+    color: var(--st-lang-opt-hover);
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+.menu-dropdown a:hover {
+    background-color: var(--st-lang-opt-hover); 
+    color: var(--st-lang-opt); 
+}
+.menu-wrapper:hover .menu-dropdown {
+    display: block;
+}
+
+.hdr-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    color: var(--st-header-gray);
+    font-size: 11px;
+}
+.st-install-btn {
+    border: none;
+    padding: 3px 12px;
+    background-color: var(--st-green-btn);
+    
+    text-align: center;
+    color: var(--st-logo-react);
+    font-size: 12px;
+    cursor: pointer;
+}
+.sign-in {
+    color: var(--st-header-gray);
+    font-size: 11px;
+    transition: color 0.2s ease;
+}
+.sign-in:hover {
+    color: var(--st-logo-react);
+}
+
+/* 언어 드롭다운 */
+.lang-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.lang-checkbox {
+    display: none !important;
+}
+.lang-btn {
+    border: none;
+    background-color: transparent;
+
+    color: var(--st-header-gray);
+    font-size: 11px;
+
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    user-select: none;
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+.lang-btn:hover {
+    color: var(--st-logo-react);
+}
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 0;
+
+    width: 257px;
+    height: auto;
+    overflow: visible;
+
+    background-color: var(--st-lang-opt);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+.lang-dropdown a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+    padding: 6px 12px;
+
+    color: var(--st-lang-opt-hover);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+.lang-dropdown a:hover {
+    background-color: var(--st-lang-opt-hover);
+    color: var(--st-lang-opt);
+}
+.beta-badge {
+    background-color: #FFA500;
+    color: var(--st-header-bg);
+    font-size: 12px;
+    margin-left: 12px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 3px 9px;
+    border-radius: 3px;
+}
+.lang-dropdown .report-link:hover {
+    background-color: var(--st-nav-bg);
+    color: var(--st-logo-react);
+    text-decoration: underline;
+}
+.lang-checkbox:checked + .lang-btn + .lang-dropdown {
+    display: block;
+}
+.lang-checkbox:checked + .lang-btn {
+    color: var(--st-logo-react);
+}
+
+.lang-arrow {
+    color: var(--st-gray-text);
+    font-size: 20px;
+}
+
+/* 각 페이지 메뉴 활성화 */
+.pg-store .hd-menu .menu-wrapper .menu-store,
+.pg-community .hd-menu .menu-wrapper .menu-community,
+.pg-about .hd-menu .menu-about,
+.pg-support .hd-menu .menu-support {
+    color: var(--st-blue);     
+}
+
+.pg-store .hd-menu .menu-wrapper .menu-store::after,
+.pg-community .hd-menu .menu-wrapper .menu-community::after,
+.pg-about .hd-menu .menu-about::after,
+.pg-support .hd-menu .menu-support::after {
+    background-color: var(--st-blue);
 }
