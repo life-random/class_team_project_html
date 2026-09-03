@@ -77,3 +77,13 @@ class_team_project_html/          ← Root
 | 연두색 뱃지 / 글자 | `--st-lightgreen` | `#A1CD44` |
 | 본문 파란색 글자 | `--st-blue-text` | `#5EAFDE` |
 | 하늘색 버튼 / 강조 | `--st-skyblue-btn` | `#66C0F4` |
+
+## 🏷️ Body Class Naming Convention
+각 페이지의 `<body>` 태그에 아래와 같은 클래스를 부여해 style.css로 처리합니다
+
+| 페이지 | 파일 경로 | `<body>` 클래스명 |
+|---|---|---|
+| 메인 | `index.html` | `<body class="pg-main">` |
+| 커뮤니티 | `pages/community.html` | `<body class="pg-community">` |
+| 정보 | `pages/about.html` | `<body class="pg-about">` |
+| 지원 | `pages/support.html` | `<body class="pg-support">` |
