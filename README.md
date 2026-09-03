@@ -65,8 +65,6 @@ class_team_project_html/          ← Root
 
 ## 🎨 Shared Color Palette
 
-## 🎨 Shared Color Palette
-
 | 용도 | CSS 변수 | 색상 |
 |---|---|---|
 | 헤더 배경 | `--st-header-bg` | `#171D25` |
