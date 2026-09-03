@@ -68,11 +68,12 @@ class_team_project_html/          ← Root
 | 용도 | CSS 변수 | 색상 |
 |---|---|---|
 | 헤더 배경 | `--st-header-bg` | `#171D25` |
-| 스팀 로고 글자 | `--st-logo` | `#C5C3C0` |
 | 헤더 메뉴 글자 | `--st-logo-react` | `#FFFFFF` |
 | 네비게이션 배경 | `--st-nav-bg` | `#272A33` |
 | 선택된 메뉴 / 파란색 버튼 | `--st-blue` | `#1A9FFF` |
-| 녹색 버튼 | `--st-green-btn` | `#6C9018` |
+| 녹색 버튼 | `--st-green-btn` | `#5C7E10` |
+| 녹색 버튼 hover | `--st-green-btn-hover` | `#6C9018` |
+| 헤더 / 본문 회색 글자 | `--st-gray-text` | `#C5C3C0` |
 | 연두색 뱃지 / 글자 | `--st-lightgreen` | `#A1CD44` |
 | 본문 파란색 글자 | `--st-blue-text` | `#5EAFDE` |
 | 하늘색 버튼 / 강조 | `--st-skyblue-btn` | `#66C0F4` |
