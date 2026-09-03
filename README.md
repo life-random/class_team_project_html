@@ -68,9 +68,11 @@ class_team_project_html/          ← Root
 | 용도 | CSS 변수 | 색상 |
 |---|---|---|
 | 헤더 배경 | `--st-header-bg` | `#171D25` |
-| 헤더 메뉴 글자 | `--st-logo-react` | `#FFFFFF` |
+| 로고 반응형 / 헤더 글자 hover | `--st-logo-react` | `#FFFFFF` |
 | 네비게이션 배경 | `--st-nav-bg` | `#272A33` |
 | 선택된 메뉴 / 파란색 버튼 | `--st-blue` | `#1A9FFF` |
+| 언어 옵션 배경 | `--st-lang-opt` | `#3D4450` |
+| 언어 옵션 배경 hover / 메뉴 글자 | `--st-lang-opt-hover` | `#DCDEDF` |
 | 녹색 버튼 | `--st-green-btn` | `#5C7E10` |
 | 녹색 버튼 hover | `--st-green-btn-hover` | `#6C9018` |
 | 헤더 / 본문 회색 글자 | `--st-gray-text` | `#C5C3C0` |
