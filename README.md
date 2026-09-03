@@ -32,12 +32,12 @@ class_team_project_html/          ← Root
 
 ## 📄 Pages
 
-| 파일 | 설명 |
-|---|---|
-| `index.html` | 메인 페이지 |
-| `pages/community.html` | 커뮤니티 |
-| `pages/about.html` | 정보 |
-| `pages/support.html` | 지원 |
+| 페이지 | 파일 | 담당자 |
+|---|---|---|
+| 메인 | `index.html` | 양형재, 최병권 |
+| 커뮤니티 | `pages/community.html` | 구도하 |
+| 정보 | `pages/about.html` | 이진우 |
+| 지원 | `pages/support.html` | 이수현 |
 
 ## 🎨 CSS
 
