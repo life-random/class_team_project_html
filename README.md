@@ -72,7 +72,7 @@ class_team_project_html/          ← Root
 | 네비게이션 배경 | `--st-nav-bg` | `#272A33` |
 | 선택된 메뉴 / 파란색 버튼 | `--st-blue` | `#1A9FFF` |
 | 언어 옵션 배경 | `--st-lang-opt` | `#3D4450` |
-| 언어 옵션 배경 hover / 메뉴 글자 | `--st-lang-opt-hover` | `#DCDEDF` |
+| 언어 옵션 배경 hover / 헤더 글자 | `--st-lang-opt-hover` | `#DCDEDF` |
 | 녹색 버튼 | `--st-green-btn` | `#5C7E10` |
 | 녹색 버튼 hover | `--st-green-btn-hover` | `#6C9018` |
 | 헤더 / 본문 회색 글자 | `--st-gray-text` | `#C5C3C0` |
