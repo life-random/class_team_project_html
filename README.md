@@ -4,7 +4,6 @@
 
 ## 📁 Root File Structure
 
-```text
 class_team_project_html/          ← Root
 │
 ├── index.html                    ← 메인 페이지
