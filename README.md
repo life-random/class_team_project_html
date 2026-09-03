@@ -71,11 +71,12 @@ class_team_project_html/          ← Root
 | 로고 반응형 / 헤더 글자 hover | `--st-logo-react` | `#FFFFFF` |
 | 네비게이션 배경 | `--st-nav-bg` | `#272A33` |
 | 선택된 메뉴 / 파란색 버튼 | `--st-blue` | `#1A9FFF` |
+| 헤더 회색 글자 | `--st-header-gray` | `#C5C3C0` |
 | 언어 옵션 배경 | `--st-lang-opt` | `#3D4450` |
 | 언어 옵션 배경 hover / 헤더 글자 | `--st-lang-opt-hover` | `#DCDEDF` |
 | 녹색 버튼 | `--st-green-btn` | `#5C7E10` |
 | 녹색 버튼 hover | `--st-green-btn-hover` | `#6C9018` |
-| 헤더 / 본문 회색 글자 | `--st-gray-text` | `#C5C3C0` |
+| 본문 회색 글자 | `--st-gray-text` | `#969696` |
 | 연두색 뱃지 / 글자 | `--st-lightgreen` | `#A1CD44` |
 | 본문 파란색 글자 | `--st-blue-text` | `#5EAFDE` |
 | 하늘색 버튼 / 강조 | `--st-skyblue-btn` | `#66C0F4` |
