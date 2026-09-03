@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>support</title>
+    <!-- 아이콘 호출 코드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="pg-support">
     <header>
-        <div class="hd-left">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img src="../images/support/logo_steam.svg" alt="로고 이미지">
-                </a>
-            </h1>
-            <nav class="hd-menu">
-                <a href="#">STORE</a>
-                <a href="#">COMMUNITY</a>
-                <a href="#">ABOUT</a>
-                <a href="#">SUPPORT</a>
-            </nav>
-        </div>
-        <div class="hd-right">
-            <div>
-                <button class="st-install-btn">Install Steam</button>
-                <a class="sign-in" href="#">sign in</a>
-                <span>&vert;</span>
-                <button class="lang-btn">language</button>
+        <div class="hd-container">
+            <div class="hd-left">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="../images/support/logo_steam.svg" alt="로고 이미지">
+                    </a>
+                </h1>
+                <nav class="hd-menu">
+                    <div class="menu-wrapper">    
+                        <a class="menu-main" href="index.html">상점</a>
+
+                        <div class="menu-dropdown">
+                            <a href="#">홈</a>
+                            <a href="#">맞춤 대기열</a>
+                            <a href="#">찜 목록</a>
+                            <a href="#">포인트 상점</a>
+                            <a href="#">뉴스</a>
+                            <a href="#">차트</a>
+                        </div>
+                    </div>
+                    <div class="menu-wrapper">    
+                        <a class="menu-community" href="community.html">커뮤니티</a>
+
+                        <div class="menu-dropdown">
+                            <a href="#">홈</a>
+                            <a href="#">토론</a>
+                            <a href="#">창작마당</a>
+                            <a href="#">장터</a>
+                            <a href="#">방송</a>
+                        </div>
+                    </div>
+                    <a class="menu-about" href="about.html">정보</a>
+                    <a class="menu-support" href="support.html">지원</a>
+                </nav>
+            </div>
+            <div class="hd-right">
+                <div class="hdr-container">
+                    <button class="st-install-btn">
+                        <!-- head 태그에 아이콘 호출 코드 삽입 확인 -->
+                        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+                        <i class="fa-solid fa-download"></i>
+                        Steam 설치
+                    </button>
+                    <a class="sign-in" href="#">로그인</a>
+                    <span>&vert;</span>
+                    <div class="lang-wrapper">
+                        <input type="checkbox" id="lang-toggle" class="lang-checkbox">
+                        <label for="lang-toggle" class="lang-btn">
+                            언어
+                            <span class="lang-arrow">&#9662;</span>
+                        </label>
+                        <div class="lang-dropdown">
+                            <a href="#">简体中文(중국어 간체)</a>
+                            <a href="#">繁體中文(중국어 번체)</a>
+                            <a href="#">日本語(일본어)</a>
+                            <a href="#">한국어</a>
+                            <a href="#">ไทย(태국어)</a>
+                            <a href="#">Bahasa Indonesia(인도네시아어)</a>
+                            <a href="#">Bahasa Melayu(말레이어) <span class="beta-badge">베타</span></a>
+                            <a href="#">Български(불가리아어)</a>
+                            <a href="#">Čeština(체코어)</a>
+                            <a href="#">Dansk(덴마크어)</a>
+                            <a href="#">Deutsch(독일어)</a>
+                            <a href="#">English(영어)</a>
+                            <a href="#">Español - España(스페인어 - 스페인)</a>
+                            <a href="#">Español - Latinoamérica(스페인어 - 중남미)</a>
+                            <a href="#">Ελληνικά(그리스어)</a>
+                            <a href="#">Français(프랑스어)</a>
+                            <a href="#">Italiano(이탈리아어)</a>
+                            <a href="#">Magyar(헝가리어)</a>
+                            <a href="#">Nederlands(네덜란드어)</a>
+                            <a href="#">Norsk(노르웨이어)</a>
+                            <a href="#">Polski(폴란드어)</a>
+                            <a href="#">Português(포르투갈어 - 포르투갈)</a>
+                            <a href="#">Português - Brasil(포르투갈어 - 브라질)</a>
+                            <a href="#">Română(루마니아어)</a>
+                            <a href="#">Русский(러시아어)</a>
+                            <a href="#">Suomi(핀란드어)</a>
+                            <a href="#">Svenska(스웨덴어)</a>
+                            <a href="#">Türkçe(튀르키예어)</a>
+                            <a href="#">Tiếng Việt(베트남어)</a>
+                            <a href="#">Українська(우크라이나어)</a>
+                            <a href="#" class="report-link">번역 관련 문제 보고</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
