@@ -69,7 +69,7 @@ class_team_project_html/          ← Root
 |---|---|---|
 | 헤더 배경 | `--st-header-bg` | `#171D25` |
 | 로고 반응형 / 헤더 글자 hover | `--st-logo-react` | `#FFFFFF` |
-| 네비게이션 배경 | `--st-nav-bg` | `#272A33` |
+| 네비게이션 배경 | `--st-nav-bg` | `#192433` |
 | 선택된 메뉴 / 파란색 버튼 | `--st-blue` | `#1A9FFF` |
 | 헤더 회색 글자 | `--st-header-gray` | `#C5C3C0` |
 | 언어 옵션 배경 | `--st-lang-opt` | `#3D4450` |
