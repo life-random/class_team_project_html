@@ -1,1 +1,352 @@
 /* 콘텐츠 너비 : 958 px */
+:root {
+    --st-header-bg: #171D25;
+    --st-logo-react: #FFFFFF;
+    --st-nav-bg: #272A33;
+    --st-header-gray: #C5C3C0;
+    --st-gray-text: #969696;
+    --st-lang-opt: #3D4450;
+    --st-lang-opt-hover: #DCDEDF;
+    --st-blue: #1A9FFF;
+    --st-green-btn: #5C7E10;
+    --st-green-btn-hover:#6C9018;
+    --st-lightgreen: #A1CD44;
+    --st-blue-text: #5EAFDE;
+    --st-skyblue-btn: #66C0F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pg-community {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #192b3e;
+    color: var(--st-logo-react);
+    font-family: "Motiva Sans", sans-serif;
+    font-weight: normal;
+}
+
+.pg-community .community-home-header,
+.pg-community .community-home-tabs,
+.pg-community .community-home-contents,
+.pg-community .community-home-sort-options,
+.pg-community .apphub-contents {
+    width: 948px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.community-home-header {
+    position: relative;
+    max-width: 948px;
+    margin: 0px auto;
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: left;
+}
+
+.community-home-title h1 {
+    display: block;
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+}
+
+.community-home-subtitle h3 {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    text-align: left;
+    color: #9099a1;
+    padding-top: 5px;
+}
+
+.community-home-app-shortcuts {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.community-home-shortcut-content {
+    width: 626px;
+    min-height: 210px;
+    padding: 10px;
+
+    display: flex;
+    gap: 10px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.community-home-login {
+    width: 293px;
+}
+
+.community-home-login-content {
+    display: block;
+    color: #c6d4df;
+    font-size: 12px;
+}
+
+.community-activity-signin-buttons {
+    display: flex;
+    justify-content: left;
+    padding-top: 16px;
+}
+
+.community-activity-signin-buttons a {
+    text-decoration: none;
+    color: var(--st-logo-react);
+
+    background: #799905;
+    background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+    background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+}
+
+.community-activity-signin-buttons a :hover {
+    cursor: pointer;
+    background: #a1bf07;
+    background: -webkit-linear-gradient(top, #a1bf07 5%, #80a006 95%);
+    background: linear-gradient(to bottom, #a1bf07 5%, #80a006 95%);
+}
+
+.community-activity-signin-buttons span {
+    display: block;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+
+    border-radius: 2px;
+}
+
+.community-activity-or {
+    float: left;
+    margin-left: 8px;
+    margin-right: 8px;
+    line-height: 32px;
+}
+
+.community-home-join-steam {
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.community-home-join-steam a{
+    color: #c6d4df;
+}
+
+.community-home-join-steam a:hover{
+    color: white;
+}
+
+.responsive-local-menu-placeholder {
+    float: left;
+    width: 50%;
+}
+
+.community-home-app-shortcuts-list-header {
+    font-size: 11px;
+    color: #8f98a0;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.community-home-app-shortcuts-list {
+    font-size: 11px;
+}
+
+.apphub-shortcut {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+}
+
+.apphub-shortcut .shortcut-item {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin-right: 5px;
+}
+
+.apphub-shortcut-title {
+    text-decoration: none;
+    color: #dadada;
+}
+
+.apphub-shortcut-title:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.new_items_text {
+    font-size: 12px;
+    line-height: 15px;
+    color: #2f89bc;
+}
+
+.community-home-searchbox {
+    width: 33%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+.community-home-search-title {
+    font-size: 11px;
+    color: #8f98a0;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.community-home-search-input {
+    background-color: #2a3f5a;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 #45556c;
+    color: #fff;
+    margin-top: 5px;
+    padding: 5px 6px 4px 5px;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+} 
+
+.apphub-search-text {
+    flex: 1;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+    color: #d6d7d8;
+    font-style: 14px;
+    font-style: italic;
+}
+
+.apphub-search-text::placeholder {
+    color: #8f98a0;
+    opacity: 1;
+}
+
+.community-home-search-divider {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #000;
+    background-color: #333;
+    margin: 35px 0;
+}
+
+.community-home-tabs {
+    position: relative;
+    max-width: 948px;
+    margin: 0px auto;
+    padding: 10px 1%;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+
+.apphub-section-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-block-start: 20px;
+    padding-block-end: 12px;
+}
+
+.apphub-section-item {
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 12px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity .2s ease;
+    text-decoration: none;
+}
+
+.apphub-section-item:hover {
+    opacity: 1;
+    color: white;
+}
+
+.apphub-section-item.active {
+    border-bottom: 3px solid var(--st-blue);
+}
+
+.community-home-sort-options {
+    padding: 0 1% 10px;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: normal;
+}
+
+.community-home-sort-btns {
+    float: right;
+    color: var(--st-gray-text);
+    font-size: 14px;
+}
+
+.community-home-sort-button {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #ebebeb !important;
+    background-color: #000;
+    box-shadow: inset 0 1px 1px #434343;
+
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.community-home-sort-button:hover {
+    background: #445b7e;
+    background: -webkit-linear-gradient(top, #445b7e 5%, #364963 95%);
+    background: linear-gradient(to bottom, #445b7e 5%, #364963 95%);
+}
+
+.community-home-sort-button.active{
+    color: #A4D7F5;
+    background: rgba(47, 137, 188, 1);
+    background: -webkit-linear-gradient(top, rgba(47, 137, 188, 1) 5%, rgba(23, 67, 92, 1) 95%);
+    background: linear-gradient(to bottom, rgba(47, 137, 188, 1) 5%, rgba(23, 67, 92, 1) 95%);
+}
+
+.community-home-sort-button.active:hover {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background: rgba(102, 192, 244, 1);
+    background: -webkit-linear-gradient(
+        top,
+        rgba(102, 192, 244, 1) 5%,
+        rgba(47, 137, 188, 1) 95%
+    );
+    background: linear-gradient(
+        to bottom,
+        rgba(102, 192, 244, 1) 5%,
+        rgba(47, 137, 188, 1) 95%
+    );
+}
+
