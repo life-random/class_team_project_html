@@ -399,6 +399,12 @@ html {
   display: grid;
   grid-template-columns: 940px 1fr;
   gap: 20px;
+  align-items: start;
+}
+
+.hardware-menu-content,
+.play-mode-content {
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 256px);
 }
 
 .hardware-cards {
@@ -451,7 +457,10 @@ html {
 .play-mode-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 87px);
+  grid-auto-rows: 87px;
   gap: 4px;
+  align-self: start;
 }
 
 .play-mode-cards a,
@@ -463,6 +472,11 @@ html {
   gap: 13px;
   background: linear-gradient(#4ba9df, #3f79d4);
   color: #fff;
+}
+
+.play-mode-cards a {
+  height: 87px;
+  min-height: 0;
 }
 
 .play-mode-cards a:nth-child(-n + 3) {
@@ -519,6 +533,26 @@ html {
   margin: -3px 0 0;
   border: 0;
   border-top: 1px solid #526171;
+}
+
+@media (min-width: 911px) and (max-width: 1255px) {
+  .play-mode-content {
+    grid-template-columns: minmax(0, 1fr) 180px;
+  }
+
+  .play-mode-cards a {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .play-mode-cards i {
+    font-size: 28px;
+  }
+
+  .play-mode-cards strong {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 .search-area {
