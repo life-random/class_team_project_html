@@ -123,6 +123,8 @@ header a {
     font-size: 11px;
 }
 .st-install-btn {
+    width: 102px;
+    height: 24px;
     border: none;
     padding: 3px 12px;
     background-color: var(--st-green-btn);
