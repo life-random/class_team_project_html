@@ -297,6 +297,7 @@
     margin: 0 auto;
     text-align: left;
     font-weight: normal;
+    padding-bottom: 10px;
 }
 
 .community-home-sort-btns {
@@ -348,5 +349,183 @@
         rgba(102, 192, 244, 1) 5%,
         rgba(47, 137, 188, 1) 95%
     );
+}
+
+.apphub-contents {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.card-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.row-pattern-1 .card:first-child {
+    flex: 2;
+}
+
+.row-pattern-1 .card:last-child {
+    flex: 1;
+}
+
+.row-pattern-2 .card:first-child {
+    flex: 1;
+}
+
+.row-pattern-2 .card:last-child {
+    flex: 2;
+}
+
+.card {
+    height: 395px;
+    background-color: #0d131b;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.compact {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: fit-content;
+    padding: 0;
+    background: none;
+    z-index: 3;
+}
+
+.footer-content {
+    width: calc((100vw - 948px) / 2);
+}
+
+.footer-text {
+    display: block;
+    padding: 0 0 4px 12px;
+    line-height: 16px;
+    color: #537793;
+}
+
+.footer-text a {
+    text-decoration: none;
+
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 7px;
+    color: #799AB4;
+}
+
+.responsive-option-link {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.footer-copyright {
+    display: block;
+    white-space: nowrap;
+}
+
+.responsive-option-link span {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    line-height: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #66C0F4;
+    background: #212c3d;
+}
+
+.responsive-option-link span:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #66C0F4;
+}
+
+@media screen and (max-width: 1400px) {
+    .compact {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+
+        background-color: #101822;
+        cursor: pointer;
+        transition: width 0.5s ease;
+        z-index: 3;
+    }
+
+    /* 접혔을 때 보이는 © */
+    .compact::before {
+        content: "©";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 32px;
+        height: 32px;
+        padding: 0;
+
+        color: #66c0f4;
+        background-color: #101822;
+    }
+
+    .compact .footer-content {
+        position: absolute;
+        left: 32px;
+        top: 0;
+
+        display: block;
+        width: 598px;
+        height: 32px;
+    }
+
+    /* 텍스트는 항상 한 줄 유지 */
+    .compact .footer-text {
+        display: block;
+        padding: 8px 0;
+        line-height: 16px;
+        white-space: nowrap;
+    }
+
+    .compact .footer-text a {
+        margin-bottom: 0;
+    }
+
+    .footer-copyright {
+        display: inline;
+    }
+
+    .responsive-option-link {
+        display: none;
+    }
+
+    .compact:hover {
+        width: 630px;
+    }
 }
 
