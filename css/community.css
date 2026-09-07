@@ -24,7 +24,14 @@
 .pg-community {
     min-height: 100vh;
     margin: 0;
+
     background-color: #192b3e;
+    background-image: url("https://store.fastly.steamstatic.com/images/storepagebackground/app/2668080?t=1769627290");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    background-attachment: fixed;
+
     color: var(--st-logo-react);
     font-family: "Motiva Sans", sans-serif;
     font-weight: normal;
@@ -46,8 +53,6 @@
     margin: 0px auto;
     padding-top: 20px;
     padding-bottom: 0;
-    padding-left: 1%;
-    padding-right: 1%;
     text-align: left;
 }
 
@@ -292,16 +297,23 @@
     border-bottom: 3px solid var(--st-blue);
 }
 
+.apphub-section-select {
+    display: none;
+}
+
 .community-home-sort-options {
     padding: 0 1% 10px;
     margin: 0 auto;
     text-align: left;
     font-weight: normal;
-    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 0 10px;
 }
 
 .community-home-sort-btns {
-    float: right;
     color: var(--st-gray-text);
     font-size: 14px;
 }
@@ -379,12 +391,21 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+
     height: 395px;
     background-color: #0d131b;
     margin-bottom: 10px;
+    
+    border: 1px solid transparent;
 }
 
 .card-image {
+    position: relative;
+    flex-shrink: 0;
+    padding: 5px;
+
     height: 300px;
     overflow: hidden;
 }
@@ -396,7 +417,133 @@
     object-fit: cover;
 }
 
+.card-type {
+    visibility: hidden;
 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+    margin: 5px;
+
+    background-color: rgba(27, 40, 56, 0.9);
+}
+
+.card:hover {
+    cursor: pointer;
+    border-color: #2f89bc;
+}
+
+.card:hover .card-type {
+    visibility: visible;
+}
+
+.card-info {
+    flex: 0 0 47px;
+
+    color: #636363;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.card-footer {
+    flex-shrink: 0;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+
+    font-size: 13px;
+    color: #636363;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 2px solid #272F38;
+}
+
+.card:hover .card-footer {
+    background-color: rgba(27, 40, 56, 0.9)
+}
+
+.card-content.review {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+.review-reactions {
+    position: relative;
+    padding: 10px 10px 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: #636363;
+    margin: 0 0 14px 0;
+}
+
+.review-reactions .award-count {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: var(--st-blue-text);
+}
+
+.review-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.review-icon {
+    display: block;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}
+
+.review-summary-text h3 {
+    color: var(--st-logo-react);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.review-summary-text p {
+    color: var(--st-logo-react);
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: bold;
+}
+
+.review-text {
+    padding: 0 10px;
+    margin-top: 14px;
+    overflow: hidden;
+    color: #acb2b8;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.review-date {
+    margin-bottom: 4px;
+    color: #8091a2;
+    font-size: 12px;
+}
+
+.card-content.review .card-footer {
+    width: 100%;
+    margin-top: auto;
+}
 
 .compact {
     position: fixed;
@@ -426,6 +573,10 @@
     margin-right: 12px;
     margin-bottom: 7px;
     color: #799AB4;
+}
+
+.footer-text a:hover {
+    color: white;
 }
 
 .responsive-option-link {
@@ -458,6 +609,95 @@
     background: #66C0F4;
 }
 
+.row-pattern-3 .card {
+    flex: 1;
+    min-width: 0;
+}
+
+.guide-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+}
+
+.guide-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin: 0 14px;
+    padding: 10px;
+    background-color: #262f38;
+}
+
+.guide-title img {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.guide-title p {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.guide-content {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+
+    padding: 14px;
+    color: #acb2b8;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.guide-card-metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 5px;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-rating .star {
+    color: #8AC33E;
+}
+
+.card-rating .star span{
+    color: #5C5C5F;
+}
+
+.card-rating p {
+    color: #53606d;
+    font-size: 12px;
+}
+
+.guide-card-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.guide-card-right .award-count {
+    color: var(--st-blue-text);
+}
+
+.guide-card-right .comments {
+    color: #acb2b8;
+}
+
+/* 화면 너비가 1400px 이하일 때 footer 처리 */
 @media screen and (max-width: 1400px) {
     .compact {
         position: fixed;
@@ -526,6 +766,85 @@
 
     .compact:hover {
         width: 630px;
+    }
+}
+
+/* 화면 너비가 910px 이하일 때 Community 상단 영역 처리 */
+@media screen and (max-width: 910px) {
+    .pg-community .community-home-header,
+    .pg-community .community-home-tabs,
+    .pg-community .community-home-sort-options,
+    .pg-community .apphub-contents {
+        width: 100%;
+    }
+
+    .community-home-header {
+        padding: 8px 6px 0;
+    }
+
+    .community-home-app-shortcuts {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .community-home-shortcut-content {
+        display: none;
+    }
+
+    .responsive-local-menu-placeholder {
+        display: none;
+    }
+
+    .community-home-searchbox {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .community-home-searchbox > div {
+        display: flex;
+        gap: 35px;
+    }
+
+    .community-home-search {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .community-home-search-divider {
+        display: none;
+    }
+
+    .community-home-tabs {
+        padding: 0 6px;
+    }
+
+    .community-home-sort-options {
+        padding: 10px 6px;
+    }
+
+    .apphub-contents {
+        padding: 0 6px;
+    }
+
+    .card-row,
+    .card-row .card {
+        min-width: 0;
+    }
+
+    .apphub-section-tabs {
+        display: none;
+    }
+
+    .apphub-section-select {
+        display: block;
+        width: 100%;
+        height: 39px;
+        padding: 0 14px;
+
+        border: 1px solid #2f89bc;
+        background-color: #0d131b;
+        color: var(--st-logo-react);
+        font-size: 14px;
     }
 }
 
