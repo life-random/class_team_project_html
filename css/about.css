@@ -1,17 +1,17 @@
 :root {
-  --st-header-bg: #171D25;
-  --st-logo-react: #FFFFFF;
-  --st-nav-bg: #272A33;
-  --st-header-gray: #C5C3C0;
+  --st-header-bg: #171d25;
+  --st-logo-react: #ffffff;
+  --st-nav-bg: #272a33;
+  --st-header-gray: #c5c3c0;
   --st-gray-text: #969696;
-  --st-lang-opt: #3D4450;
-  --st-lang-opt-hover: #DCDEDF;
-  --st-blue: #1A9FFF;
-  --st-green-btn: #5C7E10;
-  --st-green-btn-hover: #6C9018;
-  --st-lightgreen: #A1CD44;
-  --st-blue-text: #5EAFDE;
-  --st-skyblue-btn: #66C0F4;
+  --st-lang-opt: #3d4450;
+  --st-lang-opt-hover: #dcdedf;
+  --st-blue: #1a9fff;
+  --st-green-btn: #5c7e10;
+  --st-green-btn-hover: #6c9018;
+  --st-lightgreen: #a1cd44;
+  --st-blue-text: #5eafde;
+  --st-skyblue-btn: #66c0f4;
 }
 
 * {
@@ -324,7 +324,8 @@ body {
   position: relative;
   min-height: 188px;
   padding: 32px 30px 20px 70px;
-  background: #202d3d url("https://cdn.fastly.steamstatic.com/store/labs/main/images/personal_calendar_menu_bg.png") center / cover no-repeat;
+  background: #202d3d url("https://cdn.fastly.steamstatic.com/store/labs/main/images/personal_calendar_menu_bg.png")
+    center / cover no-repeat;
 }
 
 .calendar-icon {
@@ -523,9 +524,15 @@ body {
   border-radius: 3px;
 }
 
-.deck-card { background: linear-gradient(#ffd4d4, #ff858b); }
-.machine-card { background: linear-gradient(#dff4ff, #91d1f2); }
-.frame-card { background: linear-gradient(#efffd9, #a8d95d); }
+.deck-card {
+  background: linear-gradient(#ffd4d4, #ff858b);
+}
+.machine-card {
+  background: linear-gradient(#dff4ff, #91d1f2);
+}
+.frame-card {
+  background: linear-gradient(#efffd9, #a8d95d);
+}
 
 .hardware-product-art {
   display: block;
@@ -773,13 +780,7 @@ body {
   min-height: calc(100vh - 152px);
   margin-top: 0;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom,
-    #1b2028 0%,
-    #1b2028 72%,
-    #1a2531 88%,
-    #192a3b 100%
-  );
+  background: linear-gradient(to bottom, #1b2028 0%, #1b2028 72%, #1a2531 88%, #192a3b 100%);
 }
 
 .about-hero-inner {
@@ -1020,13 +1021,7 @@ body {
   position: relative;
   min-height: 770px;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom,
-    #192a3b 0%,
-    #192a3b 72%,
-    #1a2531 88%,
-    #1b2028 100%
-  );
+  background: linear-gradient(to bottom, #192a3b 0%, #192a3b 72%, #1a2531 88%, #1b2028 100%);
 }
 
 .instant-access-copy {
@@ -1103,20 +1098,104 @@ body {
   filter: brightness(0.62) saturate(0.65) blur(0.6px);
 }
 
-.instant-game-1 { top: 112px; left: 5.3%; width: 181px; height: 69px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/14f42ab797699a9c9f137fda66582d8776da4330/capsule_231x87.jpg?t=1786493086"); }
-.instant-game-2 { top: 106px; left: 22.4%; width: 132px; height: 51px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3321460/b785d3a4f8329ce63ff864c862ac5a40bb79c3fe/capsule_231x87_koreana.jpg?t=1788450739"); }
-.instant-game-3 { top: 87px; right: 22.5%; width: 131px; height: 50px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1049590/06e03bc6135774c15298b125a8d02d495bda6ffa/capsule_231x87_koreana.jpg?t=1788425018"); }
-.instant-game-4 { top: 112px; right: 5.4%; width: 183px; height: 69px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2638890/4aa8bcfcb20173a0250f03ee15473abece15f6b0/capsule_231x87.jpg?t=1788758919"); }
-.instant-game-5 { top: 268px; left: 2.1%; width: 111px; height: 42px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4128400/57ab688792b68f12926e23ff9c85aaf46cb0fbdd/capsule_231x87.jpg?t=1785908787"); }
-.instant-game-6 { top: 286px; left: 11.6%; width: 221px; height: 84px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_231x87.jpg?t=1788160834"); }
-.instant-game-7 { top: 286px; right: 11.8%; width: 220px; height: 84px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/11d3bb7607c5568c61108fe70e7c670b4940269e/capsule_231x87.jpg?t=1788683537"); }
-.instant-game-8 { top: 269px; right: 2.2%; width: 110px; height: 41px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_231x87.jpg?t=1784714419"); }
-.instant-game-9 { bottom: 189px; left: 2.1%; width: 111px; height: 43px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3564740/9cb786abba9f09ce6403c642201cd97ec37d6998/capsule_231x87_koreana.jpg?t=1787327185"); }
-.instant-game-10 { bottom: 117px; left: 1%; width: 181px; height: 68px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/9d25b2de9ae52a1ec06797daeaf700feba1459cc/capsule_231x87.jpg?t=1786031871"); }
-.instant-game-11 { bottom: 164px; left: 14.1%; width: 221px; height: 84px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/294100/a805ac5e3ceb54a2d7d3e1c1049907f1ef8bbb89/capsule_231x87.jpg?t=1782756789"); }
-.instant-game-12 { bottom: 83px; left: 25%; width: 110px; height: 42px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751260/5c44c2cccc6e7462f380d4d96004e77792c97b2f/capsule_231x87_koreana.jpg?t=1788552059"); }
-.instant-game-13 { bottom: 164px; right: 14.2%; width: 220px; height: 84px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2139460/71f8ca678f3eb4f9ac609603cefc02216cabcdb1/capsule_231x87.jpg?t=1786675226"); }
-.instant-game-14 { bottom: 117px; right: 1%; width: 181px; height: 68px; background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2406770/2bc46dcf375a61a0a5626bc96aaf09e32436e8cd/capsule_231x87.jpg?t=1788548796"); }
+.instant-game-1 {
+  top: 112px;
+  left: 5.3%;
+  width: 181px;
+  height: 69px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/14f42ab797699a9c9f137fda66582d8776da4330/capsule_231x87.jpg?t=1786493086");
+}
+.instant-game-2 {
+  top: 106px;
+  left: 22.4%;
+  width: 132px;
+  height: 51px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3321460/b785d3a4f8329ce63ff864c862ac5a40bb79c3fe/capsule_231x87_koreana.jpg?t=1788450739");
+}
+.instant-game-3 {
+  top: 87px;
+  right: 22.5%;
+  width: 131px;
+  height: 50px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1049590/06e03bc6135774c15298b125a8d02d495bda6ffa/capsule_231x87_koreana.jpg?t=1788425018");
+}
+.instant-game-4 {
+  top: 112px;
+  right: 5.4%;
+  width: 183px;
+  height: 69px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2638890/4aa8bcfcb20173a0250f03ee15473abece15f6b0/capsule_231x87.jpg?t=1788758919");
+}
+.instant-game-5 {
+  top: 268px;
+  left: 2.1%;
+  width: 111px;
+  height: 42px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4128400/57ab688792b68f12926e23ff9c85aaf46cb0fbdd/capsule_231x87.jpg?t=1785908787");
+}
+.instant-game-6 {
+  top: 286px;
+  left: 11.6%;
+  width: 221px;
+  height: 84px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_231x87.jpg?t=1788160834");
+}
+.instant-game-7 {
+  top: 286px;
+  right: 11.8%;
+  width: 220px;
+  height: 84px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/11d3bb7607c5568c61108fe70e7c670b4940269e/capsule_231x87.jpg?t=1788683537");
+}
+.instant-game-8 {
+  top: 269px;
+  right: 2.2%;
+  width: 110px;
+  height: 41px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_231x87.jpg?t=1784714419");
+}
+.instant-game-9 {
+  bottom: 189px;
+  left: 2.1%;
+  width: 111px;
+  height: 43px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3564740/9cb786abba9f09ce6403c642201cd97ec37d6998/capsule_231x87_koreana.jpg?t=1787327185");
+}
+.instant-game-10 {
+  bottom: 117px;
+  left: 1%;
+  width: 181px;
+  height: 68px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/9d25b2de9ae52a1ec06797daeaf700feba1459cc/capsule_231x87.jpg?t=1786031871");
+}
+.instant-game-11 {
+  bottom: 164px;
+  left: 14.1%;
+  width: 221px;
+  height: 84px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/294100/a805ac5e3ceb54a2d7d3e1c1049907f1ef8bbb89/capsule_231x87.jpg?t=1782756789");
+}
+.instant-game-12 {
+  bottom: 83px;
+  left: 25%;
+  width: 110px;
+  height: 42px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751260/5c44c2cccc6e7462f380d4d96004e77792c97b2f/capsule_231x87_koreana.jpg?t=1788552059");
+}
+.instant-game-13 {
+  bottom: 164px;
+  right: 14.2%;
+  width: 220px;
+  height: 84px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2139460/71f8ca678f3eb4f9ac609603cefc02216cabcdb1/capsule_231x87.jpg?t=1786675226");
+}
+.instant-game-14 {
+  bottom: 117px;
+  right: 1%;
+  width: 181px;
+  height: 68px;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2406770/2bc46dcf375a61a0a5626bc96aaf09e32436e8cd/capsule_231x87.jpg?t=1788548796");
+}
 
 .about-cta-section {
   padding: 95px 20px 135px;
@@ -1260,7 +1339,9 @@ body {
   padding: 18px;
   border-radius: 22px;
   text-align: center;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .feature-item:hover,
@@ -1277,7 +1358,9 @@ body {
   border-radius: 50%;
   background: #292929;
   object-fit: contain;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .feature-item:hover .feature-icon,
@@ -1308,7 +1391,9 @@ body {
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .feature-item:hover > a,
@@ -1793,7 +1878,9 @@ header a {
     margin: 4px 0;
     border-radius: 2px;
     background: var(--st-logo-react);
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   header.header--menu-open .menu-icon span:nth-child(1) {
@@ -1850,6 +1937,14 @@ header a {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+  }
+
+  .pg-about .hd-menu .menu-about {
+    color: #d6d7d8;
+  }
+
+  .pg-about .hd-menu .menu-about::after {
+    background-color: transparent;
   }
 
   .menu-wrapper {
@@ -2055,14 +2150,30 @@ header a {
     display: none;
   }
 
-  .instant-game-1 { left: 3%; }
-  .instant-game-4 { right: 3%; }
-  .instant-game-6 { left: -70px; }
-  .instant-game-7 { right: -70px; }
-  .instant-game-10 { left: 2%; }
-  .instant-game-11 { left: -90px; }
-  .instant-game-13 { right: -90px; }
-  .instant-game-14 { right: 2%; }
+  .instant-game-1 {
+    left: 3%;
+  }
+  .instant-game-4 {
+    right: 3%;
+  }
+  .instant-game-6 {
+    left: -70px;
+  }
+  .instant-game-7 {
+    right: -70px;
+  }
+  .instant-game-10 {
+    left: 2%;
+  }
+  .instant-game-11 {
+    left: -90px;
+  }
+  .instant-game-13 {
+    right: -90px;
+  }
+  .instant-game-14 {
+    right: 2%;
+  }
 
   .about-cta-section {
     padding-top: 70px;
