@@ -8,7 +8,9 @@ const headerMenu = header.querySelector(".header-menu-content");
 const desktop = matchMedia("(min-width: 911px)");
 const stackedNav = matchMedia("(max-width: 730px)");
 
-let wheelCount = 0;
+const navHideDistance = 400;
+let downwardScrollDistance = 0;
+let previousScrollY = window.scrollY;
 
 function closeMegaMenus() {
   nav.querySelectorAll(".mega-menu-open, .mega-menu-active").forEach((element) =>
@@ -28,7 +30,7 @@ function toggleMegaMenu(button) {
   button.classList.add("mega-menu-active");
   button.setAttribute("aria-expanded", "true");
   nav.classList.remove("nav--hidden");
-  wheelCount = 0;
+  downwardScrollDistance = 0;
 }
 
 function closeHeaderMenu() {
@@ -69,6 +71,19 @@ headerMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
+  const link = event.target.closest("a");
+  if (link?.getAttribute("href") === "#") {
+    event.preventDefault();
+  }
+
+  if (link?.matches('.hero-more[href="#about-details"]')) {
+    event.preventDefault();
+    document.getElementById("about-details").scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "start",
+    });
+  }
+
   if (!nav.contains(event.target)) closeMegaMenus();
   if (!header.contains(event.target)) closeHeaderMenu();
 });
@@ -91,28 +106,27 @@ function updateVisibleButtons() {
   }
 }
 
-window.addEventListener(
-  "wheel",
-  ({ deltaY }) => {
-    if (!deltaY) return;
+// Use actual scroll distance so wheel, auto-scroll, and keyboard input behave alike.
+function updateNavOnScroll() {
+  const currentScrollY = window.scrollY;
+  const deltaY = currentScrollY - previousScrollY;
+  const headerBottom = header.getBoundingClientRect().bottom;
 
-    if (nav.querySelector(".mega-menu-open")) {
-      wheelCount = 0;
-      nav.classList.remove("nav--hidden");
-    } else if (deltaY > 0 && nav.getBoundingClientRect().top <= 0) {
-      if (++wheelCount >= 5) nav.classList.add("nav--hidden");
-    } else if (deltaY < 0) {
-      wheelCount = 0;
-      nav.classList.remove("nav--hidden");
-    } else {
-      wheelCount = 0;
-    }
-  },
-  { passive: true },
-);
+  if (deltaY < 0 || headerBottom > 0 || nav.querySelector(".mega-menu-open")) {
+    downwardScrollDistance = 0;
+    nav.classList.remove("nav--hidden");
+  } else if (deltaY > 0) {
+    downwardScrollDistance += Math.min(deltaY, Math.max(0, -headerBottom));
+    if (downwardScrollDistance >= navHideDistance) nav.classList.add("nav--hidden");
+  }
+  previousScrollY = currentScrollY;
+}
+
+window.addEventListener("scroll", updateNavOnScroll, { passive: true });
 
 window.addEventListener("resize", () => {
   updateVisibleButtons();
+  updateNavOnScroll();
   desktop.matches ? closeHeaderMenu() : closeMegaMenus();
 });
 
