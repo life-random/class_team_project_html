@@ -1,0 +1,222 @@
+body {
+    overflow-x: hidden; 
+
+    font-family: "Motiva Sans", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+    to right, 
+    #000000 calc(50% - 800px), 
+    #1A2739 calc(50% - 550px) calc(50% + 550px), 
+    #000000 calc(50% + 800px)
+  );
+}
+
+main {
+    color: var(--st-logo-react);
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.help-header {
+    width: 100%;
+    font-size: 24px;
+    cursor: pointer;
+}
+.help-intro {
+    color: #5EAFDE;
+    font-size: 20px;
+    margin: 15px 0 21px;
+}
+.help-to-login {
+    background-color: #00000033;
+    width: 712px;
+    height: 114px;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.help-to-login p {
+    font-size: 13px;
+    color: var(--st-lang-opt-hover);
+    white-space: wrap;
+}
+.htl-btns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+
+    margin-bottom: 10px;
+}
+button {
+    border: none;
+    border-radius: 2px;
+    width: 230px;
+    height: 33px;
+    padding: 3px 15px;
+
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--st-logo-react);
+}
+
+.left {
+    background-color: var(--st-skyblue-btn);
+}
+.right {
+    background-color: #2d3d50;
+}
+
+.help-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    width: 712px;
+}
+.hs-text {
+    color: var(--st-blue-text);
+    font-size: 15px;
+}
+.game {
+    background-color: #445468;
+    height: 45px;
+    margin-top: 12px;
+    padding-right: 18px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 6px;
+}
+.game-title {
+    font-size: 15px;
+}
+.game span {
+    color: var(--st-lang-opt-hover);
+    font-size: 15px;
+    opacity: 0.6;
+}
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0 6px;
+    background-color: #3B718D;
+}
+
+.help-etc {
+    height: 66px;
+    background-color: #445468;
+    margin-top: 12px;
+    padding: 0 18px 0 21px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+.help-etc span {
+    color: var(--st-lang-opt-hover);
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.search-bottom {
+    margin-top: 50px;
+    height: 54px;
+    background-color: #324965;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0 var(--st-lang-opt);
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.left:hover, .right:hover {
+    background: linear-gradient(to right, var(--st-skyblue-btn) 30%,  #66c0f48e );
+    cursor: pointer;
+}
+
+.a-hover:hover {
+    background-color: #4581A5;
+    cursor: pointer;
+}
+
+@media (max-width: 910px) {
+    
+    main {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 730px) {
+    main {
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
+        padding: 14px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .help-intro {
+        width: 100%;
+    }
+    .help-to-login {
+        width: 100%;
+        min-width: 100%;
+        padding: 20px;
+    }
+    
+    .help-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 730px) {
+    .help-to-login {
+        height: auto;
+        text-align: center;
+    }
+
+    .htl-btns {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .htl-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 240px) {
+    .help-to-login {
+        padding: 15px;
+        justify-content: start;
+        align-items: flex-start;
+    }
+}
