@@ -1852,6 +1852,14 @@ header a {
     line-height: 24px;
   }
 
+  .pg-about .hd-menu .menu-about {
+    color: #d6d7d8;
+  }
+
+  .pg-about .hd-menu .menu-about::after {
+    background-color: transparent;
+  }
+
   .menu-wrapper {
     position: relative;
     display: block;
