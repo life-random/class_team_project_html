@@ -8,7 +8,235 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="pg-main">
+    <header>
+        <div class="hd-container">
+            <div class="hd-left">
+                <button
+                    class="menu-icon"
+                    type="button"
+                    aria-label="메뉴 열기"
+                    aria-expanded="false"
+                    aria-controls="header-menu-content"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="images/support/logo_steam.svg" alt="로고 이미지" />
+                    </a>
+                </h1>
+            </div>
+            <div class="header-menu-content" id="header-menu-content">
+                <a class="mobile-drawer-login" href="#">로그인</a>
+                <nav class="hd-menu">
+                    <div class="menu-wrapper">
+                        <a class="menu-main" href="index.html">상점</a>
+                        <div class="menu-dropdown">
+                            <a href="#">홈</a><a href="#">맞춤 대기열</a><a href="#">찜 목록</a>
+                            <a href="#">포인트 상점</a><a href="#">뉴스</a><a href="#">차트</a>
+                        </div>
+                    </div>
+                    <div class="menu-wrapper">
+                        <a class="menu-community" href="pages/community.html">커뮤니티</a>
+                        <div class="menu-dropdown">
+                            <a href="#">홈</a><a href="#">토론</a><a href="#">창작마당</a>
+                            <a href="#">장터</a><a href="#">방송</a>
+                        </div>
+                    </div>
+                    <a class="menu-about" href="pages/about.html">정보</a>
+                    <a class="menu-support" href="pages/support.html">지원</a>
+                </nav>
+                <div class="hd-right">
+                    <div class="hdr-container">
+                        <button class="st-install-btn"><i class="fa-solid fa-download"></i> Steam 설치</button>
+                        <a class="sign-in" href="#">로그인</a>
+                        <span>&vert;</span>
+                        <div class="lang-wrapper">
+                            <input type="checkbox" id="lang-toggle" class="lang-checkbox" />
+                            <label for="lang-toggle" class="lang-btn">언어 <span class="lang-arrow">&#9662;</span></label>
+                            <div class="lang-dropdown">
+                                <a href="#">简体中文(중국어 간체)</a><a href="#">繁體中文(중국어 번체)</a>
+                                <a href="#">日本語(일본어)</a><a href="#">한국어</a><a href="#">ไทย(태국어)</a>
+                                <a href="#">Bahasa Indonesia(인도네시아어)</a><a href="#">Deutsch(독일어)</a>
+                                <a href="#">English(영어)</a><a href="#">Español(스페인어)</a>
+                                <a href="#">Français(프랑스어)</a><a href="#">Italiano(이탈리아어)</a>
+                                <a href="#" class="report-link">번역 관련 문제 보고</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-drawer-links">
+                    <label for="lang-toggle">언어 변경</label>
+                    <a href="#">Steam 모바일 앱 다운로드</a>
+                    <a href="index.html">PC 웹사이트 보기</a>
+                </div>
+                <div class="mobile-drawer-footer">
+                    <strong class="valve-wordmark">VALVE</strong>
+                    <p>© Valve Corporation. 모든 권리 보유. 모든 상표는 해당 소유자의 재산입니다.</p>
+                    <p><a href="#">법적 고지</a><span>|</span><a href="#">접근성</a><span>|</span><a href="#">Steam 이용 약관</a><span>|</span><a href="#">환불</a><span>|</span><a href="#">쿠키</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="nav-menu">
+            <button class="nav-button" data-mega-menu="search-menu" aria-expanded="false">검색 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+            <button class="nav-button" data-mega-menu="recommend-menu" aria-expanded="false">추천 제품 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+            <button class="nav-button" data-mega-menu="category-menu" aria-expanded="false">카테고리 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+            <button class="nav-button" data-mega-menu="hardware-menu" aria-expanded="false">하드웨어 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+            <button class="nav-button" data-mega-menu="play-mode-menu" aria-expanded="false">플레이 모드 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+            <button class="nav-button" data-mega-menu="special-menu" aria-expanded="false">특별 섹션 <img src="images/about/down.png" alt="" aria-hidden="true" /></button>
+        </div>
+        <div class="search-area">
+            <input type="search" id="search-input" name="q" placeholder="상점 검색" />
+            <button class="search" type="button" aria-label="Search"></button>
+        </div>
+
+        <section class="mega-menu" id="search-menu">
+            <div class="mega-menu-inner search-mega-layout">
+                <div class="search-link-list">
+                    <a href="#">상점 홈</a>
+                    <a href="#"><strong>신규 출시 게임</strong><small>Steam에서 새로운 콘텐츠를 살펴보세요.</small></a>
+                    <a href="#"><strong>출시 예정 게임</strong><small>출시 예정 게임을 살펴보세요.</small></a>
+                    <a href="#"><strong>전체 차트 및 통계</strong><small>주간, 월간, 연간 인기 게임을 살펴보세요.</small></a>
+                </div>
+                <div class="search-feature-cards">
+                    <a class="feature-card feature-popular" href="#"><div class="feature-collage" aria-hidden="true">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4128400/89639ca2b8f37f7c4b2ce26d5890fef8939f0714/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2638890/ce31174fea86d0bafa21b26e853dcd0b7326e36f/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1049590/72918ebacd0d4f8537969dc8b976ceb98f681cab/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3321460/4a895369007efe7cc9da27a999bbca2427d92bb3/header_koreana.jpg" alt="" decoding="async" />
+                    </div><span>최고 인기 게임</span></a>
+                    <a class="feature-card feature-events" href="#"><div class="feature-collage" aria-hidden="true">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2183900/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/108600/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4656000/99c086faba625a8d3bc459bab444087d257ccbe1/header.jpg" alt="" decoding="async" />
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2406770/8d2765de57931435f802fa6757ad6920aea8646a/header_alt_assets_0.jpg" alt="" decoding="async" />
+                    </div><span>할인 및 이벤트</span></a>
+                </div>
+                <div class="search-column"><strong>인기 페이지</strong><a href="#">무료 플레이</a><a href="#">체험판</a><a href="#">뉴스 및 업데이트</a><a href="#">포인트 상점</a><a href="#">기프트 카드</a></div>
+                <div class="search-column"><strong>내 계정</strong><a href="#">환경 설정</a><a href="#">찜 목록</a><a href="#">내 가족</a></div>
+            </div>
+        </section>
+
+        <section class="mega-menu" id="recommend-menu">
+            <div class="mega-menu-inner recommend-mega-layout">
+                <div class="popular-games"><strong class="mega-heading">최고 인기 게임</strong><a class="game-row game-one" href="#"><span class="game-art"></span><b>PUBG: BATTLEGROUNDS<small>무료</small></b></a><a class="game-row game-two" href="#"><span class="game-art"></span><b>귀무자 Way of the Sword<small>₩ 79,800</small></b></a><a class="game-row game-three" href="#"><span class="game-art"></span><b>붉은사막 Enhanced<small><em>-20%</em> <s>₩ 79,800</s> ₩ 63,840</small></b></a></div>
+                <a class="discovery-card" href="#"><span class="calendar-icon">▦</span><strong>맞춤 캘린더</strong><p>사용자별로 맞춤 설정된 신규 출시 및 출시 예정 게임을 살펴보세요.</p><b>맞춤 캘린더 살펴보기 →</b></a>
+                <div class="recommend-links"><a href="#">맞춤 대기열</a><a href="#">커뮤니티 추천</a><a href="#">신규 출시 게임 대기열</a><a href="#">인터랙티브 추천기</a><a href="#">친구가 즐기는 게임</a><a href="#">Steam 큐레이터</a><a href="#">추천 DLC</a></div>
+            </div>
+        </section>
+
+        <section class="mega-menu" id="category-menu">
+            <div class="mega-menu-inner category-mega-layout">
+                <strong class="mega-heading">선호 카테고리</strong>
+                <div class="category-cards"><a class="category-card story-rich" href="#"><span>풍부한 스토리</span></a><a class="category-card science-fiction" href="#"><span>공상과학 및 사이버펑크</span></a><a class="category-card adventure" href="#"><span>어드벤처</span></a><a class="category-card strategy" href="#"><span>전략</span></a><a class="category-card anime" href="#"><span>애니메이션</span></a><a class="category-card rpg" href="#"><span>RPG</span></a></div>
+                <div class="tag-row"><a href="#">풍부한 스토리</a><a href="#">오픈 월드</a><a href="#">액션</a><a href="#">애니메이션</a><a href="#">RPG</a><a href="#">로그라이크</a><a href="#">공상과학 및 사이버펑크</a><a href="#">무료 플레이</a><a href="#">전략</a><a href="#">모든 스포츠</a><a href="#">격투</a><a href="#">레이싱</a><a class="all-tags" href="#">모든 태그 보기 ›</a></div>
+                <strong class="mega-heading category-all-heading">모든 장르 및 테마</strong>
+                <div class="category-columns"><div><a href="#">1인칭 슈팅</a><a href="#">3인칭 슈팅</a><a href="#">핵 앤 슬래시</a></div><div><a href="#">숨은 그림 및 물체</a><a href="#">캐주얼</a><a href="#">메트로배니아</a></div><div><a href="#">액션 RPG</a><a href="#">전략 및 전술 RPG</a><a href="#">JRPG</a></div><div><a href="#">건설 및 자동화 시뮬레이션</a><a href="#">취미 및 직업 시뮬레이션</a><a href="#">연애 시뮬레이션</a></div><div><a href="#">턴제 전략</a><a href="#">실시간 전략</a><a href="#">타워 디펜스</a></div><div><a href="#">스포츠 시뮬레이션 및 스포츠 경영</a><a href="#">레이싱</a><a href="#">레이싱 시뮬레이션</a></div><div><a href="#">공포</a><a href="#">공상과학 및 사이버펑크</a><a href="#">우주</a></div></div>
+            </div>
+        </section>
+
+        <section class="mega-menu" id="hardware-menu"><div class="mega-menu-inner hardware-mega-layout"><strong class="mega-heading">하드웨어</strong><div class="hardware-menu-content"><div class="hardware-cards"><a class="hardware-card deck-card" href="#"><span class="hardware-product-art deck-art" aria-hidden="true"></span><strong>STEAM DECK</strong></a><a class="hardware-card machine-card" href="#"><span class="hardware-product-art machine-art" aria-hidden="true"></span><strong>STEAM MACHINE</strong></a><a class="hardware-card frame-card" href="#"><span class="hardware-product-art frame-art" aria-hidden="true"></span><strong>STEAM FRAME</strong></a></div><div class="hardware-links"><a href="#">Steam Deck 도킹 스테이션</a><a href="#">Deck 완벽 호환</a><a href="#">VR 게임</a><a href="#">컨트롤러 지원</a></div></div></div></section>
+        <section class="mega-menu" id="play-mode-menu"><div class="mega-menu-inner play-mode-layout"><strong class="mega-heading">게임 플레이 모드</strong><div class="play-mode-content"><div class="play-mode-cards"><a href="#"><i class="fa-solid fa-mobile-screen-button"></i><strong>DECK 완벽 호환</strong></a><a href="#"><i class="fa-solid fa-display"></i><strong>REMOTE PLAY</strong></a><a href="#"><i class="fa-solid fa-vr-cardboard"></i><strong>VR 게임</strong></a><a href="#"><i class="fa-solid fa-gamepad"></i><strong>컨트롤러 지원</strong></a><a href="#"><i class="fa-solid fa-user-group"></i><strong>협동</strong></a></div><div class="play-mode-links"><a href="#">로컬 지역 네트워크</a><a href="#">로컬 멀티플레이어 및 파티</a><a href="#">대규모 멀티플레이어</a><a href="#">멀티플레이어</a><a href="#">온라인 경쟁</a><a href="#">싱글 플레이어</a></div></div></div></section>
+        <section class="mega-menu" id="special-menu"><div class="mega-menu-inner special-menu-layout"><strong class="mega-heading">특별 섹션</strong><div class="special-menu-content"><div class="special-cards"><a href="#"><i class="fa-solid fa-compact-disc"></i><strong>체험판</strong></a><a href="#"><i class="fa-solid fa-circle-down"></i><strong>DLC</strong></a><a href="#"><i class="fa-solid fa-tag"></i><strong>할인 이벤트</strong></a></div><div class="special-links"><div><a href="#">소프트웨어</a><a href="#">사운드트랙</a><a href="#">앞서 해보기</a><hr /><a href="#">PC방용</a><a href="#">macOS</a><a href="#">SteamOS + Linux</a></div><div><a href="#">Steam Next Fest</a><a href="#">Steam 어워드</a><a href="#">Steam 돌아보기</a><a href="#">Steam 실험실</a></div></div></div></div></section>
+    </div>
+    <div id="top-content">
+        <div class="steam-container">
+            <div class="main-banner">
+                <img src="images/index/head_dawnwalker.jpg" alt="" />
+            </div>
+
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2>특집 및 추천 게임</h2>
+                    <button class="gift-btn">기프트 카드 보내기</button>
+                </div>
+                <div class="featured-card">
+                    <div class="card-media">
+                        <img src="images/index/main_afex.jpg" alt="" />
+                    </div>
+                    <div class="card-details">
+                        <h3>Apex 레전드™</h3>
+                        <div class="sub-images">
+                            <div class="thumb"><img src="images/index/afex_sub1.png" alt="" /></div>
+                            <div class="thumb"><img src="images/index/afex_sub2.png" alt="" /></div>
+                            <div class="thumb"><img src="images/index/afex_sub3.png" alt="" /></div>
+                            <div class="thumb"><img src="images/index/afex_sub4.png" alt="" /></div>
+                        </div>
+                        <div class="card-status">
+                            <span class="tag">최고 인기 게임</span>
+                            <span class="price-info">무료 플레이</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="deals-section">
+                <div class="section-header">
+                    <h2>할인 및 이벤트</h2>
+                    <a href="#" class="more-btn">더 보기</a>
+                </div>
+                <div class="deals-grid">
+                    <div class="deal-card tall">
+                        <span class="badge badge-publisher">프랜차이즈 할인</span>
+                        <div class="thumb"><img src="images/index/center_yapyap.jpg" alt="" /></div>
+                        <div class="price-bar"><span class="discount highlight">최대 -90% 할인</span></div>
+                    </div>
+                    <div class="deal-card tall">
+                        <span class="badge badge-weekend">주말 특가</span>
+                        <div class="thumb"><img src="images/index/center_blackmanor.jpg" alt="" /></div>
+                        <div class="price-bar"><span class="discount">-20%</span><div class="price-box"><span class="old-price">₩ 10,500</span><span class="sale-price">₩ 8,400</span></div></div>
+                    </div>
+                    <div class="deal-card wide">
+                        <span class="badge badge-daily">일일 특가</span>
+                        <div class="thumb"><img src="images/index/center_thesinking.jpg" alt="" /></div>
+                        <div class="price-bar"><span class="discount">-90%</span><div class="price-box"><span class="old-price">₩ 16,500</span><span class="sale-price">₩ 1,650</span></div></div>
+                    </div>
+                    <div class="deal-card wide">
+                        <span class="badge badge-daily">일일 특가</span>
+                        <div class="thumb"><img src="images/index/center_event.jpg" alt="" /></div>
+                        <div class="price-bar"><span class="discount">-75%</span><div class="price-box"><span class="old-price">₩ 20,500</span><span class="sale-price">₩ 5,120</span></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="queue-banner">
+                <div class="queue-media"><img class="banner-img" src="images/index/banner_bg.jpg" alt="" /></div>
+            </div>
+
+            <div class="spotlight-box">
+                <section class="spotlight-section">
+                    <div class="section-header"><h2><strong>슈팅</strong> 게임<br /><span class="sub-title">집중 조명 태그</span></h2></div>
+                    <div class="item-grid">
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_shooting_7days.jpg" alt="" /></div><div class="price-bar"><span class="discount">-90%</span><del>₩ 65,000</del><span class="sale-price">₩ 6,500</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_shooting_grayzone.jpg" alt="" /></div><div class="price-bar"><span class="discount">-50%</span><del>₩ 83,000</del><span class="sale-price">₩ 41,500</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_shooting_gtfo.jpg" alt="" /></div><div class="price-bar"><span class="discount">-25%</span><del>₩ 39,900</del><span class="sale-price">₩ 29,920</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_shooting_warhammer.jpg" alt="" /></div><div class="price-bar"><span class="discount">-75%</span><del>₩ 32,000</del><span class="sale-price">₩ 8,000</span></div></div>
+                    </div>
+                    <div class="more-box"><a href="#" class="more-btn">더 보기</a></div>
+                </section>
+                <section class="spotlight-section">
+                    <div class="section-header"><h2><strong>범죄</strong> 게임<br /><span class="sub-title">집중 조명 태그</span></h2></div>
+                    <div class="item-grid">
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_crime_gta5.jpg" alt="" /></div><div class="price-bar"><span class="discount">-85%</span><del>₩ 26,500</del><span class="sale-price">₩ 3,970</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_crime_payday2.jpg" alt="" /></div><div class="price-bar"><span class="discount">-30%</span><del>₩ 32,000</del><span class="sale-price">₩ 22,400</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_crime_payday3.jpg" alt="" /></div><div class="price-bar"><span class="discount">-80%</span><del>₩ 49,800</del><span class="sale-price">₩ 9,960</span></div></div>
+                        <div class="item-card"><div class="thumb"><img src="images/index/card_crime_staffer.jpg" alt="" /></div><div class="price-bar"><span class="discount">-30%</span><del>₩ 22,000</del><span class="sale-price">₩ 15,400</span></div></div>
+                    </div>
+                    <div class="more-box"><a href="#" class="more-btn">더 보기</a></div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
     <!-- bottom -->
     <div class="bottom-layout">
         <div class="home-tab-bg">

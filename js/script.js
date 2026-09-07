@@ -1,7 +1,7 @@
 const nav = document.querySelector(".nav");
-const navMenu = nav.querySelector(".nav-menu");
-const navButtons = [...navMenu.querySelectorAll(".nav-button")];
-const searchArea = nav.querySelector(".search-area");
+const navMenu = nav?.querySelector(".nav-menu");
+const navButtons = navMenu ? [...navMenu.querySelectorAll(".nav-button")] : [];
+const searchArea = nav?.querySelector(".search-area");
 const header = document.querySelector("header");
 const menuButton = header.querySelector(".menu-icon");
 const headerMenu = header.querySelector(".header-menu-content");
@@ -11,12 +11,12 @@ const stackedNav = matchMedia("(max-width: 730px)");
 let wheelCount = 0;
 
 function closeMegaMenus() {
-  nav.querySelectorAll(".mega-menu-open, .mega-menu-active").forEach((element) =>
-    element.classList.remove("mega-menu-open", "mega-menu-active"),
-  );
-  nav.querySelectorAll("[data-mega-menu]").forEach((button) =>
-    button.setAttribute("aria-expanded", "false"),
-  );
+  if (!nav) return;
+
+  nav
+    .querySelectorAll(".mega-menu-open, .mega-menu-active")
+    .forEach((element) => element.classList.remove("mega-menu-open", "mega-menu-active"));
+  nav.querySelectorAll("[data-mega-menu]").forEach((button) => button.setAttribute("aria-expanded", "false"));
 }
 
 function toggleMegaMenu(button) {
@@ -35,12 +35,10 @@ function closeHeaderMenu() {
   header.classList.remove("header--menu-open");
   menuButton.setAttribute("aria-expanded", "false");
   menuButton.setAttribute("aria-label", "메뉴 열기");
-  header.querySelectorAll(".mobile-dropdown-open").forEach((menu) =>
-    menu.classList.remove("mobile-dropdown-open"),
-  );
+  header.querySelectorAll(".mobile-dropdown-open").forEach((menu) => menu.classList.remove("mobile-dropdown-open"));
 }
 
-nav.addEventListener("click", (event) => {
+nav?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-mega-menu]");
   if (button) toggleMegaMenu(button);
 });
@@ -59,9 +57,7 @@ headerMenu.addEventListener("click", (event) => {
   if (wrapper && link.parentElement === wrapper && !desktop.matches) {
     event.preventDefault();
     const open = !wrapper.classList.contains("mobile-dropdown-open");
-    header.querySelectorAll(".mobile-dropdown-open").forEach((menu) =>
-      menu.classList.remove("mobile-dropdown-open"),
-    );
+    header.querySelectorAll(".mobile-dropdown-open").forEach((menu) => menu.classList.remove("mobile-dropdown-open"));
     wrapper.classList.toggle("mobile-dropdown-open", open);
   } else {
     closeHeaderMenu();
@@ -69,7 +65,7 @@ headerMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
-  if (!nav.contains(event.target)) closeMegaMenus();
+  if (!nav?.contains(event.target)) closeMegaMenus();
   if (!header.contains(event.target)) closeHeaderMenu();
 });
 
@@ -81,6 +77,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 function updateVisibleButtons() {
+  if (!nav || !navMenu || !searchArea) return;
+
   navButtons.forEach((button) => (button.hidden = false));
   const style = getComputedStyle(nav);
   const available = nav.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
@@ -96,7 +94,7 @@ window.addEventListener(
   ({ deltaY }) => {
     if (!deltaY) return;
 
-    if (nav.querySelector(".mega-menu-open")) {
+    if (nav?.querySelector(".mega-menu-open")) {
       wheelCount = 0;
       nav.classList.remove("nav--hidden");
     } else if (deltaY > 0 && nav.getBoundingClientRect().top <= 0) {
