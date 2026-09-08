@@ -199,8 +199,8 @@ a {
   line-height: 15px;
 }
 
-.tab-item-purchase {
-}
+/* .tab-item-purchase {
+} */
 
 .discount-pct {
   display: flex;
@@ -216,10 +216,10 @@ a {
   padding: 2px 8px;
   gap: 4px;
 }
-.original-price {
+/* .original-price {
 }
 .final-price {
-}
+} */
 
 .tab-item-content {
   display: flex;
@@ -229,7 +229,7 @@ a {
   gap: 2px;
 }
 
-.tab-item-title {
+/* .tab-item-title {
 }
 
 .item-tags {
@@ -239,7 +239,7 @@ a {
 }
 
 .tab-item-release-date {
-}
+} */
 
 /* 더 보기 bar */
 .see-more-link {
@@ -373,8 +373,8 @@ a {
 /* home padge content */
 /* ------------------------------------- */
 
-.title-grid {
-}
+/* .title-grid {
+} */
 
 .home-section-title {
   background-color: unset;
@@ -1184,7 +1184,7 @@ a {
 .nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 900;
   display: flex;
   height: 48px;
   align-items: center;
