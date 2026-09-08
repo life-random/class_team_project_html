@@ -86,7 +86,7 @@ class_team_project_html/          ← Root
 
 | 페이지 | 파일 경로 | `<body>` 클래스명 |
 |---|---|---|
-| 메인 | `index.html` | `<body class="pg-main">` |
+| 메인 | `index.html` | `<body class="pg-store">` |
 | 커뮤니티 | `pages/community.html` | `<body class="pg-community">` |
 | 정보 | `pages/about.html` | `<body class="pg-about">` |
 | 지원 | `pages/support.html` | `<body class="pg-support">` |
