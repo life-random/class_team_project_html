@@ -158,7 +158,10 @@ a {
   background: var(--st-lightgreen);
   font-weight: bolder;
   font-size: 14px;
-  padding: 0 3px;
+  /* padding: 0 3px; */
+  display: flex;
+  align-items: center;
+  padding: 2px 3px;
 }
 
 .discount-prices {
@@ -200,7 +203,7 @@ a {
 }
 
 .discount-pct {
-  flex: flex;
+  display: flex;
   align-items: center;
   padding: 2px 3px;
 }
@@ -815,7 +818,6 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 20px 0;
   background: #1b2838;
   color: #c6d4df;
   font-family: Arial, Helvetica, sans-serif;
@@ -823,9 +825,11 @@ a {
 
 #top-content .steam-container {
   display: flex;
-  width: min(940px, calc(100% - 32px));
+  width: min(1200px, calc(100% - 32px));
   flex-direction: column;
   gap: 30px;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
 #top-content .section-header {
