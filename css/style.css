@@ -94,7 +94,7 @@ left: 0;
 width: 97px;              
 background-color: var(--st-lang-opt);
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-z-index: 1000;      
+z-index: 9999;      
 }
 .menu-dropdown a {
 display: block;
@@ -172,7 +172,7 @@ height: auto;
 overflow: visible;
 background-color: var(--st-lang-opt);
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-z-index: 999;
+z-index: 9999;
 }
 .lang-dropdown a {
 display: flex;
