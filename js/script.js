@@ -3,8 +3,8 @@ const navMenu = nav?.querySelector(".nav-menu");
 const navButtons = navMenu ? [...navMenu.querySelectorAll(".nav-button")] : [];
 const searchArea = nav?.querySelector(".search-area");
 const header = document.querySelector("header");
-const menuButton = header.querySelector(".menu-icon");
-const headerMenu = header.querySelector(".header-menu-content");
+const sidebarToggle = header.querySelector("#sidebar");
+const headerMenu = header.querySelector(".hd-menu");
 const desktop = matchMedia("(min-width: 911px)");
 const stackedNav = matchMedia("(max-width: 730px)");
 
@@ -32,10 +32,8 @@ function toggleMegaMenu(button) {
 }
 
 function closeHeaderMenu() {
-  header.classList.remove("header--menu-open");
-  menuButton.setAttribute("aria-expanded", "false");
-  menuButton.setAttribute("aria-label", "메뉴 열기");
-  header.querySelectorAll(".mobile-dropdown-open").forEach((menu) => menu.classList.remove("mobile-dropdown-open"));
+  sidebarToggle.checked = false;
+  header.querySelectorAll(".accordion-toggle").forEach((toggle) => (toggle.checked = false));
 }
 
 nav?.addEventListener("click", (event) => {
@@ -43,25 +41,16 @@ nav?.addEventListener("click", (event) => {
   if (button) toggleMegaMenu(button);
 });
 
-menuButton.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("header--menu-open");
-  menuButton.setAttribute("aria-expanded", isOpen);
-  menuButton.setAttribute("aria-label", isOpen ? "메뉴 닫기" : "메뉴 열기");
+sidebarToggle.addEventListener("change", () => {
+  if (sidebarToggle.checked) closeMegaMenus();
+  else closeHeaderMenu();
 });
 
 headerMenu.addEventListener("click", (event) => {
   const link = event.target.closest("a");
   if (!link) return;
 
-  const wrapper = link.parentElement.closest(".menu-wrapper");
-  if (wrapper && link.parentElement === wrapper && !desktop.matches) {
-    event.preventDefault();
-    const open = !wrapper.classList.contains("mobile-dropdown-open");
-    header.querySelectorAll(".mobile-dropdown-open").forEach((menu) => menu.classList.remove("mobile-dropdown-open"));
-    wrapper.classList.toggle("mobile-dropdown-open", open);
-  } else {
-    closeHeaderMenu();
-  }
+  closeHeaderMenu();
 });
 
 document.addEventListener("click", (event) => {
@@ -73,7 +62,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   closeMegaMenus();
   closeHeaderMenu();
-  menuButton.focus();
 });
 
 function updateVisibleButtons() {
@@ -85,7 +73,9 @@ function updateVisibleButtons() {
   const searchWidth = stackedNav.matches ? 0 : searchArea.offsetWidth;
 
   while (navMenu.scrollWidth + searchWidth > available) {
-    [...navMenu.children].filter((button) => !button.hidden).at(-1).hidden = true;
+    const lastVisibleButton = navButtons.filter((button) => !button.hidden).at(-1);
+    if (!lastVisibleButton) break;
+    lastVisibleButton.hidden = true;
   }
 }
 
